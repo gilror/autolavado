@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Vehiculos;
 
 class Vehiculo extends Controller
 {
@@ -13,7 +14,8 @@ class Vehiculo extends Controller
      */
     public function index()
     {
-        //
+        $datos['vehiculos']=Vehiculos::paginate(5);
+        return view('vehiculos/listvehiculo', $datos);
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Servicios;
 
 class Servicio extends Controller
 {
@@ -13,7 +14,8 @@ class Servicio extends Controller
      */
     public function index()
     {
-        //
+        $datos['servicios']=Servicios::paginate(5);
+        return view('servicios/listservicio', $datos);
     }
 
     /**

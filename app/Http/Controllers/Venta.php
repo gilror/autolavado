@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Ventas;
 
 class Venta extends Controller
 {
@@ -13,7 +14,8 @@ class Venta extends Controller
      */
     public function index()
     {
-        //
+        $datos['ventas']=Ventas::paginate(5);
+        return view('ventas/listventa', $datos);
     }
 
     /**

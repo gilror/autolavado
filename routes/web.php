@@ -25,6 +25,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/cliente', [App\Http\Controllers\HomeController::class, 'rcliente'])->name('cliente');
 Route::get('/clientes', [App\Http\Controllers\Cliente::class, 'index']);
 Route::get('/trabajadores', [App\Http\Controllers\Trabajador::class, 'index']);
+Route::get('/vehiculos', [App\Http\Controllers\Vehiculo::class, 'index']);
+Route::get('/ventas', [App\Http\Controllers\Venta::class, 'index']);
+Route::get('/servicios', [App\Http\Controllers\Servicio::class, 'index']);
 
 /* Route::get('/clientes', function(){
     $cliente=Clientes::all();

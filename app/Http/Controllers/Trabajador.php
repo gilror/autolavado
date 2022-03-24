@@ -14,7 +14,7 @@ class Trabajador extends Controller
      */
     public function index()
     {
-        $datos['trabajhadores']=Trabajadores::paginate(5);
+        $datos['trabajadores']=Trabajadores::paginate(5);
         return view('trabajadores/listtrabajador', $datos);
     }
 

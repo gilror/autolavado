@@ -6,28 +6,20 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Primer Apellido</th>
-      <th scope="col">Segundo Apellido</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Teléfono</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Fecha Registro</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Costo</th>
       <th scope="col">Estatus</th>
+      <th scope="col">Fecha Registro</th>
     </tr>
   </thead>
   <tbody>
-      @foreach($clientes as $cliente)
+      @foreach($servicios as $servicio)
     <tr>
-      <th>{{$cliente->idcliente}}</th>
-      <th>{{$cliente->nombre}}</th>
-      <th>{{$cliente->apaterno}}</th>
-      <th>{{$cliente->amaterno}}</th>
-      <th>{{$cliente->direccion}}</th>
-      <th>{{$cliente->telefono}}</th>
-      <th>{{$cliente->correo}}</th>
-      <th>{{$cliente->fechareg}}</th>
+      <th>{{$cliente->idservicio}}</th>
+      <th>{{$cliente->descrpcion}}</th>
+      <th>{{$cliente->costo}}</th>
       <th>{{$cliente->estatus}}</th>
+      <th>{{$cliente->fechareg}}</th>
       <th><form action="" methosd="post">
             <input type="submit" onclick="return confirm('¿Quires Borrar?')" value="Borrar">
           </form>
