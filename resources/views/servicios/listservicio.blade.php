@@ -15,11 +15,11 @@
   <tbody>
       @foreach($servicios as $servicio)
     <tr>
-      <th>{{$cliente->idservicio}}</th>
-      <th>{{$cliente->descrpcion}}</th>
-      <th>{{$cliente->costo}}</th>
-      <th>{{$cliente->estatus}}</th>
-      <th>{{$cliente->fechareg}}</th>
+      <th>{{$servicio->idservicio}}</th>
+      <th>{{$servicio->descripcion}}</th>
+      <th>{{$servicio->costo}}</th>
+      <th>{{$servicio->estatus}}</th>
+      <th>{{$servicio->fechareg}}</th>
       <th><form action="" methosd="post">
             <input type="submit" onclick="return confirm('¿Quires Borrar?')" value="Borrar">
           </form>

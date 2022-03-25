@@ -15,7 +15,7 @@
     </tr>
   </thead>
   <tbody>
-      @foreach($ventas as $ventas)
+      @foreach($ventas as $venta)
     <tr>
       <th>{{$venta->idventa}}</th>
       <th>{{$venta->fecha}}</th>
