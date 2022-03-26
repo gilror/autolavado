@@ -21,13 +21,14 @@ Route::get('/', function () {
 
  Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/cliente', [App\Http\Controllers\HomeController::class, 'rcliente'])->name('cliente');
-Route::get('/clientes', [App\Http\Controllers\Cliente::class, 'index']);
-Route::get('/trabajadores', [App\Http\Controllers\Trabajador::class, 'index']);
-Route::get('/vehiculos', [App\Http\Controllers\Vehiculo::class, 'index']);
-Route::get('/ventas', [App\Http\Controllers\Venta::class, 'index']);
-Route::get('/servicios', [App\Http\Controllers\Servicio::class, 'index']);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/cliente', [App\Http\Controllers\HomeController::class, 'rcliente'])->name('cliente');
+// Route::resource('/clientes', App\Http\Controllers\Cliente::class, 'index');
+Route::resource('/clientes', App\Http\Controllers\Cliente::class);
+/* Route::resource('/trabajadores', [App\Http\Controllers\Trabajador::class, 'index']);
+Route::resource('/vehiculos', [App\Http\Controllers\Vehiculo::class, 'index']);
+Route::resource('/ventas', [App\Http\Controllers\Venta::class, 'index']);
+Route::resource('/servicios', [App\Http\Controllers\Servicio::class, 'index']); */
 
 /* Route::get('/clientes', function(){
     $cliente=Clientes::all();

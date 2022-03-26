@@ -45,7 +45,7 @@ class Cliente extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($idcliente)
     {
         //
     }
@@ -56,7 +56,7 @@ class Cliente extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($idcliente)
     {
         //
     }
@@ -68,7 +68,7 @@ class Cliente extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $idcliente)
     {
         //
     }
@@ -79,8 +79,9 @@ class Cliente extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($idcliente)
     {
-        //
+        Clientes::destroy($idcliente);
+        return redirect('clientes');
     }
 }

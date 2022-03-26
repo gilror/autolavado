@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Auto</b>Lavado',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -254,6 +254,31 @@ return [
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
+        [
+            'text' => 'Clientes',
+            'url'  => '/clientes',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Trabajadores',
+            'url'  => '/trabajadores',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Vehiculos',
+            'url'  => '/vehiculos',
+            'icon' => 'fas fa-fw fa-car',
+        ],
+        [
+            'text' => 'Servicios',
+            'url'  => '/servicios',
+            'icon' => 'fas fa-fw fa-car',
+        ],
+        [
+            'text' => 'Ventas',
+            'url'  => '/ventas',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',

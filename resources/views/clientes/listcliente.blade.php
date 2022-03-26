@@ -1,7 +1,10 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+@extends('adminlte::page')
+@section('title', 'Dashboard')
+@section('content_header')
+    <h1>Dashboard</h1>
+    @stop
+    @section('content')
 <h1>Listar Clientes</h1>
-
-
 <table class="table">
   <thead>
     <tr>
@@ -28,13 +31,23 @@
       <th>{{$cliente->correo}}</th>
       <th>{{$cliente->fechareg}}</th>
       <th>{{$cliente->estatus}}</th>
-      <th><form action="" methosd="post">
-            <input type="submit" onclick="return confirm('¿Quires Borrar?')" value="Borrar">
+      <th><form action="{{ url('/clientes/'.$cliente->idcliente)}}" method="post">
+          @csrf
+          {{method_field('DELETE')}}
+          <button type="submit" class="btn btn-danger" onclick="return confirm('¿Quires Borrar?')">Borrar</button>
           </form>
-          <form action="" methosd="post">
+          <form action="" method="post">
             <input type="submit" onclick="return confirm('¿Quires Editar?')" value="Editar">
           </form></th>
     </tr>
     @endforeach
   </tbody>
 </table>
+@endsection
+@section('css')
+<link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+<script>console.log('Hi')</script>
+@stop
