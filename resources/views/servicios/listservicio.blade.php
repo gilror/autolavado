@@ -25,10 +25,12 @@
       <th>{{$servicio->costo}}</th>
       <th>{{$servicio->estatus}}</th>
       <th>{{$servicio->fechareg}}</th>
-      <th><form action="" methosd="post">
-            <input type="submit" onclick="return confirm('¿Quires Borrar?')" value="Borrar">
+      <th><form action="{{ url('/servicios/'.$servicio->idservicio)}}" method="post">
+          @csrf
+          {{method_field('DELETE')}}
+          <button type="submit" class="btn btn-danger" onclick="return confirm('¿Quires Borrar?')">Borrar</button>
           </form>
-          <form action="" methosd="post">
+          <form action="" method="post">
             <input type="submit" onclick="return confirm('¿Quires Editar?')" value="Editar">
           </form></th>
     </tr>

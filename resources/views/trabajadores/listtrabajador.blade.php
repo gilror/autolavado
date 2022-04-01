@@ -32,14 +32,14 @@
       <td>{{$trabajador->correo}}</td>
       <td>{{$trabajador->tipo}}</td>
       <td>{{$trabajador->estatus}}</td>
-      <td>
-          <form action="" methosd="post">
-            <input type="submit" onclick="return confirm('¿Quires Borrar?')" value="Borrar">
+      <th><form action="{{ url('/trabajadores/'.$trabajador->idtrabajador)}}" method="post">
+          @csrf
+          {{method_field('DELETE')}}
+          <button type="submit" class="btn btn-danger" onclick="return confirm('¿Quires Borrar?')">Borrar</button>
           </form>
-          <form action="" methosd="post">
+          <form action="" method="post">
             <input type="submit" onclick="return confirm('¿Quires Editar?')" value="Editar">
-          </form>
-      </td>
+          </form></th>
     </tr>
     @endforeach
   </tbody>
