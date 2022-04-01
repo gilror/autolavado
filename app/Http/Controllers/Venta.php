@@ -82,6 +82,6 @@ class Venta extends Controller
     public function destroy($idventa)
     {
         Ventas::destroy($idventa);
-        return redirect('servicios');
+        return redirect('ventas');
     }
 }
