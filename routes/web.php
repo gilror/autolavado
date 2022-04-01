@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Clientes;
+use App\Models\Servicios;
+use App\Models\Ventas;
+use App\Models\Trabajadores;
+use App\Models\Vehiculos;
 
 
 /*

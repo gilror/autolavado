@@ -35,9 +35,8 @@
           @csrf
           {{method_field('DELETE')}}
           <button type="submit" class="btn btn-danger" onclick="return confirm('¿Quires Borrar?')">Borrar</button>
-          </form>
-          <form action="" method="post">
-            <input type="submit" onclick="return confirm('¿Quires Editar?')" value="Editar">
+          <button type="button" class="btn btn-warning" type="submit" onclick="return confirm('¿Quires Editar?')"
+          value="Editar"><i class="fas fa-fw fa-pen"></i></button>
           </form></th>
     </tr>
     @endforeach
